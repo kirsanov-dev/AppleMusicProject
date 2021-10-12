@@ -12,6 +12,7 @@ struct EditLibraryView: View {
     @State var listItems = Model.data
     @State var selections: [String] = []
     @State var multiSelection = Set<UUID>()
+    @Environment(\.presentationMode) var presentation
     
     var body: some View {
         List(selection: $multiSelection) {
@@ -27,6 +28,14 @@ struct EditLibraryView: View {
             .onMove(perform: move)
         }
         .environment(\.editMode, $isEditMode)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(trailing:
+                                Button(action: {
+                                    self.presentation.wrappedValue.dismiss()
+                                }, label: {
+                                    Text("Готово")
+                                })
+        )
         .accentColor(.red)
     }
     
