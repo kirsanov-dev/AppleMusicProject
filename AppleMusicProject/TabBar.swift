@@ -44,6 +44,9 @@ struct TabBar: View {
                 }
             }
             .accentColor(.red)
+            
+            // Мини-плеер над таббаром
+            MiniPlayer()
         
         })
     }
