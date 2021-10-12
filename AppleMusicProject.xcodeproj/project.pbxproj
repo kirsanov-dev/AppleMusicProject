@@ -11,6 +11,8 @@
 		0B9FE3EA27159D0700F58B33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3E927159D0700F58B33 /* ContentView.swift */; };
 		0B9FE3EC27159D0B00F58B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9FE3EB27159D0B00F58B33 /* Assets.xcassets */; };
 		0B9FE3EF27159D0B00F58B33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9FE3EE27159D0B00F58B33 /* Preview Assets.xcassets */; };
+		0B9FE3FB2715A6BE00F58B33 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */; };
+		0B9FE3FD2715AFAF00F58B33 /* EditLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		0B9FE3EB27159D0B00F58B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B9FE3EE27159D0B00F58B33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B9FE3F027159D0B00F58B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLibraryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				0B9FE3E727159D0700F58B33 /* AppleMusicProjectApp.swift */,
 				0B9FE3E927159D0700F58B33 /* ContentView.swift */,
+				0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */,
+				0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */,
 				0B9FE3EB27159D0B00F58B33 /* Assets.xcassets */,
 				0B9FE3F027159D0B00F58B33 /* Info.plist */,
 				0B9FE3ED27159D0B00F58B33 /* Preview Content */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B9FE3EA27159D0700F58B33 /* ContentView.swift in Sources */,
+				0B9FE3FB2715A6BE00F58B33 /* LibraryView.swift in Sources */,
+				0B9FE3FD2715AFAF00F58B33 /* EditLibraryView.swift in Sources */,
 				0B9FE3E827159D0700F58B33 /* AppleMusicProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
