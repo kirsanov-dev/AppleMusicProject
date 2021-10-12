@@ -21,6 +21,13 @@ struct LibraryView: View {
                     .multilineTextAlignment(.center)
             }
             .navigationBarTitle("Медиатека")
+            .navigationBarItems(trailing:
+                                    NavigationLink(
+                                        destination: EditLibraryView(),
+                                        label: {
+                                            Text("Править")
+                                        })
+            )
         }
     }
 }
