@@ -14,6 +14,7 @@
 		0B9FE3FB2715A6BE00F58B33 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */; };
 		0B9FE3FD2715AFAF00F58B33 /* EditLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */; };
 		0B9FE3FF2715B70E00F58B33 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FE2715B70E00F58B33 /* Model.swift */; };
+		0B9FE4012715BDE800F58B33 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE4002715BDE800F58B33 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLibraryView.swift; sourceTree = "<group>"; };
 		0B9FE3FE2715B70E00F58B33 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0B9FE4002715BDE800F58B33 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				0B9FE3E927159D0700F58B33 /* ContentView.swift */,
 				0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */,
 				0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */,
+				0B9FE4002715BDE800F58B33 /* TabBar.swift */,
 				0B9FE3FE2715B70E00F58B33 /* Model.swift */,
 				0B9FE3EB27159D0B00F58B33 /* Assets.xcassets */,
 				0B9FE3F027159D0B00F58B33 /* Info.plist */,
@@ -150,6 +153,7 @@
 				0B9FE3FF2715B70E00F58B33 /* Model.swift in Sources */,
 				0B9FE3EA27159D0700F58B33 /* ContentView.swift in Sources */,
 				0B9FE3FB2715A6BE00F58B33 /* LibraryView.swift in Sources */,
+				0B9FE4012715BDE800F58B33 /* TabBar.swift in Sources */,
 				0B9FE3FD2715AFAF00F58B33 /* EditLibraryView.swift in Sources */,
 				0B9FE3E827159D0700F58B33 /* AppleMusicProjectApp.swift in Sources */,
 			);
