@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct EditLibraryView: View {
+    @State var isEditMode = EditMode.active
     @State var listItems = Model.data
     @State var selections: [String] = []
     @State var multiSelection = Set<UUID>()
     
     var body: some View {
-        List{
+        List(selection: $multiSelection) {
             ForEach(listItems, id: \.id) { item in
                 ListItem(title: item.title, icon: item.icon, isSelected: self.selections.contains(item.title)){
                     if self.selections.contains(item.title) {
@@ -23,8 +24,14 @@ struct EditLibraryView: View {
                     }
                 }
             }
+            .onMove(perform: move)
         }
+        .environment(\.editMode, $isEditMode)
         .accentColor(.red)
+    }
+    
+    func move(from source: IndexSet, to destination: Int) {
+        self.listItems.move(fromOffsets: source, toOffset: destination)
     }
 }
 
