@@ -9,35 +9,25 @@ import SwiftUI
 
 struct TabBar: View {
     @State var current = 0
+    @State var isEditLibrary = false
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             TabView(selection: $current) {
                 
-                // Таб Медиатека
                 LibraryView()
                 .tag(0)
                 .tabItem { Image(systemName: "music.note.house.fill")
                     Text("Медиатека")
                 }
                 
-                // Таб Радио
-                NavigationView {
-                    ScrollView {
-                    }
-                        .navigationBarTitle("Радио")
-                }
+               Text("Радио")
                 .tag(1)
                 .tabItem { Image(systemName: "antenna.radiowaves.left.and.right")
                     Text("Радио")
                 }
                 
-                // Таб Поиск
-                NavigationView {
-                    ScrollView {
-                    }
-                        .navigationBarTitle("Поиск")
-                }
+                Text("Поиск")
                 .tag(2)
                 .tabItem { Image(systemName: "magnifyingglass")
                     Text("Поиск")
@@ -45,7 +35,6 @@ struct TabBar: View {
             }
             .accentColor(.red)
             
-            // Мини-плеер над таббаром
             MiniPlayer()
         
         })

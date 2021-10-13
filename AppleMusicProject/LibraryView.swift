@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @State var showMainLibraryView = true
+    
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Ищете свою музыку?")
-                    .font(.system(size: 25))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Text("Здесь появится купленная Вами в iTunes Store музыка")
-                    .frame(width: 300)
-                    .font(.system(size: 18))
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
+            if self.showMainLibraryView {
+                MainLibraryView()
+                    .navigationBarItems(trailing:
+                                            Button(action: {
+                        showMainLibraryView.toggle()
+                    }, label: {
+                        Text("Править")
+                        })
+                    )
+                    .navigationBarTitle("Медиатека")
+            } else {
+                EditLibraryView()
+                    .navigationBarItems(trailing:
+                                            Button(action: {
+                        showMainLibraryView.toggle()
+                    }, label: {
+                        Text("Готово")
+                        })
+                    )
+                    .navigationBarTitle("Медиатека")
+                    .navigationBarBackButtonHidden(true)
             }
-            .navigationBarTitle("Медиатека")
-            .navigationBarItems(trailing:
-                                    NavigationLink(
-                                        destination: EditLibraryView(),
-                                        label: {
-                                            Text("Править")
-                                        })
-            )
         }
     }
 }

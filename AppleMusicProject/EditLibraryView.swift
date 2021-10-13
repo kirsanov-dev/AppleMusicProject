@@ -28,43 +28,14 @@ struct EditLibraryView: View {
             .onMove(perform: move)
         }
         .environment(\.editMode, $isEditMode)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(trailing:
-                                Button(action: {
-                                    self.presentation.wrappedValue.dismiss()
-                                }, label: {
-                                    Text("Готово")
-                                })
-        )
-        .accentColor(.red)
+        .listStyle(PlainListStyle())
     }
+
     
     func move(from source: IndexSet, to destination: Int) {
         self.listItems.move(fromOffsets: source, toOffset: destination)
     }
 }
-
-struct ListItem: View {
-    var title: String
-    var icon: String
-    var isSelected: Bool
-    var action: () -> Void
-    
-    var body: some View {
-        Button(action: self.action) {
-            HStack(spacing: 20) {
-                Image(systemName: self.icon)
-                    .resizable()
-                    .frame(width: 24, height: 24)
-                    .foregroundColor(.red)
-                Text(self.title)
-                    .font(.system(size: 24))
-            }
-            .frame(height: 58)
-        }
-    }
-}
-
 
 struct EditLibraryView_Previews: PreviewProvider {
     static var previews: some View {
