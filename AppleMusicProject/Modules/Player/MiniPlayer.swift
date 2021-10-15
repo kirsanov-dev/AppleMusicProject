@@ -38,7 +38,7 @@ struct MiniPlayer: View {
             .accentColor(.black)
         }
         .frame(height: 80)
-        .background(Color.init(.systemGray6))
+        .background(Color.init(.systemGray6).opacity(0.9))
         .offset(y: -49)
     }
 }

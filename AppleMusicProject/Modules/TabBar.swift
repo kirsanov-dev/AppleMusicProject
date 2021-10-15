@@ -21,7 +21,7 @@ struct TabBar: View {
                     Text("Медиатека")
                 }
                 
-               Text("Радио")
+              RadioView()
                 .tag(1)
                 .tabItem { Image(systemName: "antenna.radiowaves.left.and.right")
                     Text("Радио")

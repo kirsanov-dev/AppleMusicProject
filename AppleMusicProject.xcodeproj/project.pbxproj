@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B03F64F2719A949003ECDE0 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03F64E2719A949003ECDE0 /* RadioView.swift */; };
+		0B03F6512719BFFD003ECDE0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03F6502719BFFD003ECDE0 /* FavoritesView.swift */; };
+		0B03F6532719C041003ECDE0 /* FavoritesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03F6522719C041003ECDE0 /* FavoritesItem.swift */; };
+		0B03F6552719C07F003ECDE0 /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03F6542719C07F003ECDE0 /* StationsView.swift */; };
+		0B03F6572719C09E003ECDE0 /* StationsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03F6562719C09E003ECDE0 /* StationsItem.swift */; };
+		0B03F6592719C18A003ECDE0 /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03F6582719C18A003ECDE0 /* RadioModel.swift */; };
 		0B65AEFA27176EA700C33AA2 /* MainLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65AEF927176EA700C33AA2 /* MainLibraryView.swift */; };
 		0B65AEFC27176EDF00C33AA2 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65AEFB27176EDF00C33AA2 /* ListItem.swift */; };
 		0B65AEFE2717762A00C33AA2 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65AEFD2717762A00C33AA2 /* Metrics.swift */; };
@@ -16,12 +22,18 @@
 		0B9FE3EF27159D0B00F58B33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9FE3EE27159D0B00F58B33 /* Preview Assets.xcassets */; };
 		0B9FE3FB2715A6BE00F58B33 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */; };
 		0B9FE3FD2715AFAF00F58B33 /* EditLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */; };
-		0B9FE3FF2715B70E00F58B33 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FE2715B70E00F58B33 /* Model.swift */; };
+		0B9FE3FF2715B70E00F58B33 /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3FE2715B70E00F58B33 /* LibraryModel.swift */; };
 		0B9FE4012715BDE800F58B33 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE4002715BDE800F58B33 /* TabBar.swift */; };
 		0B9FE4032715BF9100F58B33 /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE4022715BF9100F58B33 /* MiniPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B03F64E2719A949003ECDE0 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		0B03F6502719BFFD003ECDE0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		0B03F6522719C041003ECDE0 /* FavoritesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItem.swift; sourceTree = "<group>"; };
+		0B03F6542719C07F003ECDE0 /* StationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
+		0B03F6562719C09E003ECDE0 /* StationsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsItem.swift; sourceTree = "<group>"; };
+		0B03F6582719C18A003ECDE0 /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
 		0B65AEF927176EA700C33AA2 /* MainLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLibraryView.swift; sourceTree = "<group>"; };
 		0B65AEFB27176EDF00C33AA2 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		0B65AEFD2717762A00C33AA2 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
@@ -33,7 +45,7 @@
 		0B9FE3F027159D0B00F58B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLibraryView.swift; sourceTree = "<group>"; };
-		0B9FE3FE2715B70E00F58B33 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0B9FE3FE2715B70E00F58B33 /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
 		0B9FE4002715BDE800F58B33 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		0B9FE4022715BF9100F58B33 /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,10 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B03F64D2719A8FC003ECDE0 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				0B03F64E2719A949003ECDE0 /* RadioView.swift */,
+				0B03F6502719BFFD003ECDE0 /* FavoritesView.swift */,
+				0B03F6522719C041003ECDE0 /* FavoritesItem.swift */,
+				0B03F6542719C07F003ECDE0 /* StationsView.swift */,
+				0B03F6562719C09E003ECDE0 /* StationsItem.swift */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
 		0B65AEFF27177A5300C33AA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0B9FE3FE2715B70E00F58B33 /* Model.swift */,
+				0B9FE3FE2715B70E00F58B33 /* LibraryModel.swift */,
+				0B03F6582719C18A003ECDE0 /* RadioModel.swift */,
 				0B65AEFD2717762A00C33AA2 /* Metrics.swift */,
 			);
 			path = Model;
@@ -61,6 +86,7 @@
 		0B65AF0027177A8A00C33AA2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0B03F64D2719A8FC003ECDE0 /* Radio */,
 				0B65AF0227177AAB00C33AA2 /* Library */,
 				0B65AF0127177AA100C33AA2 /* Player */,
 				0B9FE4002715BDE800F58B33 /* TabBar.swift */,
@@ -202,15 +228,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B9FE3FF2715B70E00F58B33 /* Model.swift in Sources */,
+				0B9FE3FF2715B70E00F58B33 /* LibraryModel.swift in Sources */,
+				0B03F6572719C09E003ECDE0 /* StationsItem.swift in Sources */,
 				0B9FE3EA27159D0700F58B33 /* ContentView.swift in Sources */,
 				0B9FE3FB2715A6BE00F58B33 /* LibraryView.swift in Sources */,
+				0B03F6552719C07F003ECDE0 /* StationsView.swift in Sources */,
 				0B65AEFC27176EDF00C33AA2 /* ListItem.swift in Sources */,
+				0B03F64F2719A949003ECDE0 /* RadioView.swift in Sources */,
 				0B9FE4012715BDE800F58B33 /* TabBar.swift in Sources */,
 				0B9FE4032715BF9100F58B33 /* MiniPlayer.swift in Sources */,
 				0B65AEFA27176EA700C33AA2 /* MainLibraryView.swift in Sources */,
+				0B03F6532719C041003ECDE0 /* FavoritesItem.swift in Sources */,
+				0B03F6592719C18A003ECDE0 /* RadioModel.swift in Sources */,
 				0B65AEFE2717762A00C33AA2 /* Metrics.swift in Sources */,
 				0B9FE3FD2715AFAF00F58B33 /* EditLibraryView.swift in Sources */,
+				0B03F6512719BFFD003ECDE0 /* FavoritesView.swift in Sources */,
 				0B9FE3E827159D0700F58B33 /* AppleMusicProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
