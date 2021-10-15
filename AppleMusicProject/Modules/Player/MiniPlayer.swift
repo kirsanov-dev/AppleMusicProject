@@ -24,19 +24,16 @@ struct MiniPlayer: View {
                 
                 Spacer()
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image(systemName: "play.fill")
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                })
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image(systemName: "forward.fill")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 20, height: 20)
-                        .padding(.trailing, 37)
-                        .padding(.leading, 20)
-                })
+                Image(systemName: "play.fill")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+               
+                Image(systemName: "forward.fill")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 20, height: 20)
+                    .padding(.trailing, 37)
+                    .padding(.leading, 20)
             }
             .accentColor(.black)
         }
