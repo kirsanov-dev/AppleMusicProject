@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B65AEFA27176EA700C33AA2 /* MainLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65AEF927176EA700C33AA2 /* MainLibraryView.swift */; };
+		0B65AEFC27176EDF00C33AA2 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65AEFB27176EDF00C33AA2 /* ListItem.swift */; };
+		0B65AEFE2717762A00C33AA2 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65AEFD2717762A00C33AA2 /* Metrics.swift */; };
 		0B9FE3E827159D0700F58B33 /* AppleMusicProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3E727159D0700F58B33 /* AppleMusicProjectApp.swift */; };
 		0B9FE3EA27159D0700F58B33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE3E927159D0700F58B33 /* ContentView.swift */; };
 		0B9FE3EC27159D0B00F58B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9FE3EB27159D0B00F58B33 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B65AEF927176EA700C33AA2 /* MainLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLibraryView.swift; sourceTree = "<group>"; };
+		0B65AEFB27176EDF00C33AA2 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		0B65AEFD2717762A00C33AA2 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		0B9FE3E427159D0700F58B33 /* AppleMusicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9FE3E727159D0700F58B33 /* AppleMusicProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicProjectApp.swift; sourceTree = "<group>"; };
 		0B9FE3E927159D0700F58B33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +49,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B65AEFF27177A5300C33AA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B9FE3FE2715B70E00F58B33 /* Model.swift */,
+				0B65AEFD2717762A00C33AA2 /* Metrics.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B65AF0027177A8A00C33AA2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0B65AF0227177AAB00C33AA2 /* Library */,
+				0B65AF0127177AA100C33AA2 /* Player */,
+				0B9FE4002715BDE800F58B33 /* TabBar.swift */,
+				0B9FE3E927159D0700F58B33 /* ContentView.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0B65AF0127177AA100C33AA2 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				0B9FE4022715BF9100F58B33 /* MiniPlayer.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		0B65AF0227177AAB00C33AA2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */,
+				0B65AEF927176EA700C33AA2 /* MainLibraryView.swift */,
+				0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */,
+				0B65AEFB27176EDF00C33AA2 /* ListItem.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		0B65AF0327177B2600C33AA2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0B9FE3E727159D0700F58B33 /* AppleMusicProjectApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		0B9FE3DB27159D0700F58B33 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +115,9 @@
 		0B9FE3E627159D0700F58B33 /* AppleMusicProject */ = {
 			isa = PBXGroup;
 			children = (
-				0B9FE3E727159D0700F58B33 /* AppleMusicProjectApp.swift */,
-				0B9FE3E927159D0700F58B33 /* ContentView.swift */,
-				0B9FE3FA2715A6BE00F58B33 /* LibraryView.swift */,
-				0B9FE3FC2715AFAF00F58B33 /* EditLibraryView.swift */,
-				0B9FE4002715BDE800F58B33 /* TabBar.swift */,
-				0B9FE4022715BF9100F58B33 /* MiniPlayer.swift */,
-				0B9FE3FE2715B70E00F58B33 /* Model.swift */,
+				0B65AEFF27177A5300C33AA2 /* Model */,
+				0B65AF0027177A8A00C33AA2 /* Modules */,
+				0B65AF0327177B2600C33AA2 /* App */,
 				0B9FE3EB27159D0B00F58B33 /* Assets.xcassets */,
 				0B9FE3F027159D0B00F58B33 /* Info.plist */,
 				0B9FE3ED27159D0B00F58B33 /* Preview Content */,
@@ -156,8 +205,11 @@
 				0B9FE3FF2715B70E00F58B33 /* Model.swift in Sources */,
 				0B9FE3EA27159D0700F58B33 /* ContentView.swift in Sources */,
 				0B9FE3FB2715A6BE00F58B33 /* LibraryView.swift in Sources */,
+				0B65AEFC27176EDF00C33AA2 /* ListItem.swift in Sources */,
 				0B9FE4012715BDE800F58B33 /* TabBar.swift in Sources */,
 				0B9FE4032715BF9100F58B33 /* MiniPlayer.swift in Sources */,
+				0B65AEFA27176EA700C33AA2 /* MainLibraryView.swift in Sources */,
+				0B65AEFE2717762A00C33AA2 /* Metrics.swift in Sources */,
 				0B9FE3FD2715AFAF00F58B33 /* EditLibraryView.swift in Sources */,
 				0B9FE3E827159D0700F58B33 /* AppleMusicProjectApp.swift in Sources */,
 			);
