@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditLibraryView: View {
     @State var isEditMode = EditMode.active
-    @State var listItems = Model.data
+    @State var listItems = LibraryModel.data
     @State var selections: [String] = []
     @State var multiSelection = Set<UUID>()
     @Environment(\.presentationMode) var presentation
