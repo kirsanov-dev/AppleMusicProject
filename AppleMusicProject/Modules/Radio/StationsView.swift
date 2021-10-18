@@ -11,7 +11,7 @@ struct StationsView: View {
     @State var items = RadioModel.stationsData
     
     let columns: [GridItem] = [
-        GridItem(.flexible(), spacing: 16)
+        GridItem(.flexible(), spacing: 12)
     ]
     
     var body: some View {
@@ -28,12 +28,11 @@ struct StationsView: View {
                     ) {
                         ForEach(items, id: \.id) { item in
                             StationsItem(image: item.image, title: item.title, description: item.description)
-                            Divider()
                         }
                     }
                 })
-                .padding(.leading, 16)
-                .padding(.trailing, 16)
+                .padding(.leading, 12)
+                .padding(.trailing, 12)
         }
     }
 }
