@@ -11,7 +11,7 @@ struct FavoritesView: View {
     @State var items = RadioModel.favoritesData
     
     let rows: [GridItem] = [
-        GridItem(.fixed(340))
+        GridItem(.fixed(330))
     ]
     
     var body: some View {
@@ -22,8 +22,8 @@ struct FavoritesView: View {
                     FavoritesItem(image: item.image, title: item.title, category: item.category, description: item.description)
                 }
             }
-            .padding(.leading, 16)
-            .padding(.bottom, 16)
+            .padding(.leading, 12)
+            .padding(.bottom, 12)
             Divider()
         }
     }

@@ -16,12 +16,12 @@ struct FavoritesItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(self.category ?? "")
-                .font(.system(size: FontSize.regular))
+                .font(.system(size: FontSize.small))
                 .foregroundColor(.gray)
             Text(self.title)
-                .font(.system(size: FontSize.regular, weight: .bold))
+                .font(.system(size: FontSize.medium))
             Text(self.description)
-                .font(.system(size: FontSize.regular))
+                .font(.system(size: FontSize.small))
                 .foregroundColor(.gray)
             Image(self.image)
                 .resizable()

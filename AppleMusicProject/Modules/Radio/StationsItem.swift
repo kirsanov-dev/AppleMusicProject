@@ -13,21 +13,25 @@ struct StationsItem: View {
     var description: String
     
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             Image(self.image)
                 .resizable()
-                .frame(width: 100, height: 100)
+                .frame(width: 95, height: 95)
                 .scaledToFit()
                 .cornerRadius(5)
             VStack(alignment: .leading) {
+                Spacer()
                 Text(self.title)
-                    .font(.system(size: FontSize.regular, weight: .bold))
+                    .font(.system(size: FontSize.medium))
                 Text(self.description)
-                    .font(.system(size: FontSize.regular))
+                    .font(.system(size: FontSize.small))
                     .foregroundColor(.gray)
+                Spacer()
+                Divider()
             }
             .padding(.leading, 12)
             Spacer()
         }
+        .frame(height: 115)
     }
 }
