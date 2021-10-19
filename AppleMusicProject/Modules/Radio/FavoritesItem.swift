@@ -21,10 +21,12 @@ struct FavoritesItem: View {
             Text(self.title)
                 .font(.system(size: FontSize.medium))
             Text(self.description)
-                .font(.system(size: FontSize.small))
+                .font(.system(size: FontSize.regular))
                 .foregroundColor(.gray)
             Image(self.image)
                 .resizable()
+                .clipped()
+                .frame(width: 380)
                 .scaledToFit()
                 .cornerRadius(10)
         }
