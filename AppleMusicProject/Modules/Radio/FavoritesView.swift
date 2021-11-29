@@ -23,9 +23,10 @@ struct FavoritesView: View {
                 }
             }
             .padding(.leading, 12)
-            .padding(.bottom, 12)
+            .padding(.bottom, 10)
             Divider()
         }
+        .frame(height: 380)
     }
 }
 
