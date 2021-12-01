@@ -16,27 +16,27 @@ struct TabBar: View {
             TabView(selection: $current) {
                 
                 LibraryView()
-                .tag(0)
-                .tabItem { Image(systemName: "music.note.house.fill")
-                    Text("Медиатека")
-                }
+                    .tag(0)
+                    .tabItem { Image(systemName: "music.note.house.fill")
+                        Text("Медиатека")
+                    }
                 
-              RadioView()
-                .tag(1)
-                .tabItem { Image(systemName: "antenna.radiowaves.left.and.right")
-                    Text("Радио")
-                }
+                RadioView()
+                    .tag(1)
+                    .tabItem { Image(systemName: "antenna.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
                 
-                Text("Поиск")
-                .tag(2)
-                .tabItem { Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
+                SearchView()
+                    .tag(2)
+                    .tabItem { Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                    }
             }
             .accentColor(.red)
             
             MiniPlayer()
-        
+            
         })
     }
 }
