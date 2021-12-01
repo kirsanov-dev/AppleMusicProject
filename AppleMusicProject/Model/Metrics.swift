@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 enum FontSize {
+    static let tiny: CGFloat = 14
     static let small: CGFloat = 17
     static let regular: CGFloat = 19
     static let medium: CGFloat = 23
