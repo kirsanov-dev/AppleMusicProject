@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MiniPlayer: View {
+    @State private var showingPlayer = false
+    
     var body: some View {
         VStack {
             HStack(spacing: 15) {
@@ -17,6 +19,10 @@ struct MiniPlayer: View {
                     .cornerRadius(10)
                     .shadow(color: .gray, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: 2.0, y: 2.0)
                     .padding(.leading, 25)
+                    .onTapGesture(count: 2, perform: {
+                        showingPlayer.toggle()
+                    })
+                    .fullScreenCover(isPresented: $showingPlayer, content: PlayerView.init)
                 
                 Text("Seven Days")
                     .padding(.leading, 5)
@@ -38,7 +44,7 @@ struct MiniPlayer: View {
             .accentColor(.black)
         }
         .frame(height: 80)
-        .background(Color.init(.systemGray6).opacity(0.9))
+        .background(Color.init(.systemGray6).opacity(0.95))
         .offset(y: -49)
     }
 }

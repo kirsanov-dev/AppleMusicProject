@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategoryItem: View {
+struct CategoriesItem: View {
     var image: String
     var title: String
     

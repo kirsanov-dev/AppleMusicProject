@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct SearchView: View {
+struct CategoriesView: View {
     
     @State var searchText = ""
     
-    @State var items = CategoryModel.categories
+    @State var items = CategoriesModel.categories
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -47,7 +47,7 @@ struct SearchView: View {
                                 
                         ) {
                             ForEach(items, id: \.id) { item in
-                                CategoryItem(image: item.image, title: item.title)
+                                CategoriesItem(image: item.image, title: item.title)
                             }
                         }
                     })
@@ -63,6 +63,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        CategoriesView()
     }
 }
