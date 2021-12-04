@@ -10,8 +10,8 @@ import SwiftUI
 struct CategoriesView: View {
     
     @State var searchText = ""
-    
     @State var items = CategoriesModel.categories
+    @State var categoryTitle = ""
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -21,7 +21,6 @@ struct CategoriesView: View {
     var body: some View {
         NavigationView{
             VStack {
-                
                 HStack(spacing: 8) {
                     Image(systemName: "magnifyingglass")
                         .font(.system(size: 20))
@@ -47,13 +46,15 @@ struct CategoriesView: View {
                                 
                         ) {
                             ForEach(items, id: \.id) { item in
-                                CategoriesItem(image: item.image, title: item.title)
+                                NavigationLink(destination: CategorySampleView(), label: {
+                                    CategoriesItem(image: item.image, title: item.title)
+                                })
                             }
                         }
                     })
                 }
-                .padding(.leading, 12)
-                .padding(.trailing, 12)
+                .padding(.leading, 15)
+                .padding(.trailing, 15)
                 
             }
             .navigationTitle("Поиск")

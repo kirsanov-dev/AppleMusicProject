@@ -17,7 +17,7 @@ struct CategoriesItem: View {
                 .resizable()
                 .frame(maxWidth: 200, maxHeight: 140)
                 .scaledToFit()
-                .cornerRadius(5)
+                .cornerRadius(10)
             Text(self.title)
                 .frame(maxWidth: 150, maxHeight: 110, alignment: .bottomLeading)
                 .offset(x: 15)
