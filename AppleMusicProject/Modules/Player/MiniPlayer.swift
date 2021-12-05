@@ -30,16 +30,21 @@ struct MiniPlayer: View {
                 
                 Spacer()
                 
-                Image(systemName: "play.fill")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-               
-                Image(systemName: "forward.fill")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 20, height: 20)
-                    .padding(.trailing, 37)
-                    .padding(.leading, 20)
+                Button {} label: {
+                    Image(systemName: "play.fill")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                }
+                
+                Button {} label: {
+                    Image(systemName: "forward.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 20, height: 20)
+                        .padding(.trailing, 37)
+                        .padding(.leading, 20)
+                }
+    
             }
             .accentColor(.black)
         }

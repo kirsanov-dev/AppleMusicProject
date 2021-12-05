@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategorySampleView: View {
+struct SampleCategoryView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             PlaylistSection()
@@ -32,6 +32,6 @@ struct CategorySampleView: View {
 
 struct CategorySampleView_Previews: PreviewProvider {
     static var previews: some View {
-        CategorySampleView()
+        SampleCategoryView()
     }
 }

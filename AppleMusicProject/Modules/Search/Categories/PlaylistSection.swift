@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlaylistSection: View {
-    @State var items = SampleCategoryModel.playlistsData
+    @State var items = SampleCategoryModel.data
     
     let rows: [GridItem] = [
         GridItem(.fixed(330))
@@ -18,7 +18,7 @@ struct PlaylistSection: View {
         ScrollView(.horizontal, showsIndicators: false) {
             Divider()
             LazyHGrid(rows: rows) {
-                ForEach(items, id: \.id) { item in
+                ForEach(items.filter( {$0.type == .playlist} ), id: \.id) { item in
                     PlaylistItem(image: item.image, title: item.title, category: item.category, description: item.description)
                 }
             }
