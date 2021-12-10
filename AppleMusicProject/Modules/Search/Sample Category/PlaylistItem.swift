@@ -27,7 +27,7 @@ struct PlaylistItem: View {
             Image(self.image)
                 .resizable()
                 .clipped()
-                .frame(width: 390)
+                .frame(width: UIScreen.main.bounds.size.width * 0.9)
                 .scaledToFit()
                 .cornerRadius(10)
         }

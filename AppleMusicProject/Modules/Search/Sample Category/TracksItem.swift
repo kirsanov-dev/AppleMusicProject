@@ -18,8 +18,8 @@ struct TracksItem: View {
         VStack(alignment: .leading) {
             Image(self.image)
                 .resizable()
-                .frame(width: 185, height: 185)
                 .scaledToFit()
+                .frame(width: UIScreen.main.bounds.size.width * 0.44)
                 .cornerRadius(5)
             Text(self.title)
                 .font(.system(size: FontSize.tiny))
@@ -33,7 +33,7 @@ struct TracksItem: View {
                 .lineLimit(2)
                 .foregroundColor(.gray)
         }
-        .frame(width: 185, height: 235)
+//        .frame(width: 185, height: 235)
     }
 }
 
