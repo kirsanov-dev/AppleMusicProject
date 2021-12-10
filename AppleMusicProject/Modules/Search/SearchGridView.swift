@@ -23,10 +23,10 @@ struct SearchGridView: View {
                 columns: columns,
                 content: {
                     ForEach(model.data.filter({ "\($0.title)".contains(searchText) && $0.type == .playlist }), id: \.id) { item in
-                        PlaylistGridItem(image: item.image, title: item.title, description: item.description, type: item.type)
+                        SearchGridItem(image: item.image, title: item.title, description: item.description, type: item.type)
                     }
                     ForEach(model.data.filter({ "\($0.title)".contains(searchText) && $0.type == .track }), id: \.id) { item in
-                        TrackGridItem(image: item.image, title: item.title, description: item.description, type: item.type)
+                        SearchGridItem(image: item.image, title: item.title, description: item.description, type: item.type)
                     }
                 })
                 .padding(.leading, 12)
