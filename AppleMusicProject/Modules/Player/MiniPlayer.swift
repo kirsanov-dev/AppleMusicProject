@@ -18,7 +18,7 @@ struct MiniPlayer: View {
                     .frame(width: 55, height: 55)
                     .cornerRadius(10)
                     .shadow(color: .gray, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: 2.0, y: 2.0)
-                    .padding(.leading, 25)
+                    .padding(.leading, 15)
                     .onTapGesture(count: 2, perform: {
                         showingPlayer.toggle()
                     })
