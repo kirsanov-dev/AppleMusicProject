@@ -10,6 +10,7 @@ import SwiftUI
 struct TabBar: View {
     @State var current = 0
     @State var isEditLibrary = false
+    @StateObject private var miniPlayer = MiniPlayerObject()
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
@@ -27,7 +28,7 @@ struct TabBar: View {
                         Text("Радио")
                     }
                 
-                CategoriesView()
+                SearchView()
                     .tag(2)
                     .tabItem { Image(systemName: "magnifyingglass")
                         Text("Поиск")
@@ -36,14 +37,32 @@ struct TabBar: View {
             .accentColor(.red)
             
             MiniPlayer()
-            
+                .if(!miniPlayer.isShowing) { view in
+                    view.hidden()
+                }
         })
+            .environmentObject(miniPlayer)
     }
 }
 
+extension View {
+    @ViewBuilder func `if`<Content: View>(_ condition: @autoclosure () -> Bool, transform: (Self) -> Content) -> some View {
+        if condition() {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}
+
+class MiniPlayerObject: ObservableObject {
+    @Published var isShowing: Bool = true
+}
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         TabBar()
     }
 }
+
+

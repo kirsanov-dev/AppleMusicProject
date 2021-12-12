@@ -26,11 +26,12 @@ struct PlaylistItem: View {
                 .foregroundColor(.gray)
             Image(self.image)
                 .resizable()
+                .scaledToFill()
                 .clipped()
-                .frame(width: UIScreen.main.bounds.size.width * 0.9)
-                .scaledToFit()
-                .cornerRadius(10)
+                .frame(maxWidth: Size.screenWidth90)
+                .cornerRadius(CornerRadius.regular)
         }
+        .frame(height: Size.screenHeight40)
     }
 }
 

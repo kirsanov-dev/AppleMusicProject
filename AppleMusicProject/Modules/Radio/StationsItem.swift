@@ -16,9 +16,9 @@ struct StationsItem: View {
         HStack(alignment: .center) {
             Image(self.image)
                 .resizable()
-                .frame(width: 95, height: 95)
+                .frame(width: Size.screenWidth20, height: Size.screenWidth20)
                 .scaledToFit()
-                .cornerRadius(5)
+                .cornerRadius(CornerRadius.regular)
             VStack(alignment: .leading) {
                 Spacer()
                 Text(self.title)
@@ -29,9 +29,9 @@ struct StationsItem: View {
                 Spacer()
                 Divider()
             }
-            .padding(.leading, 12)
+            .padding(.leading, Padding.regular)
             Spacer()
         }
-        .frame(height: 115)
+        .frame(height: Size.screenWidth25)
     }
 }

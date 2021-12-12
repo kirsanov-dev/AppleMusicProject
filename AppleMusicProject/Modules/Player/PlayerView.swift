@@ -10,25 +10,33 @@ import SwiftUI
 struct PlayerView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.colorScheme) var colorScheme
     @State private var volumeLevel: Double  = 5.0
     @State private var currentTime: Double = 0.0
     var totalTime: Double = 4.5 * 60.0
     
+    private func timeString(time: Double) -> String {
+        let minute = Int(time) / 60 % 60
+        let second = Int(time) % 60
+        return String(format: "%02i:%02i", minute, second)
+    }
+    
     var body: some View {
         
         ZStack {
-            LinearGradient(gradient: AppColors.colorOfSky, startPoint: .leading, endPoint: .topTrailing)
-                .ignoresSafeArea()
+            
+            LinearGradient(gradient: colorScheme == .dark ? Color.darkSky : Color.purpleMyst, startPoint: .leading, endPoint: .topTrailing)
+                            .ignoresSafeArea()
             
             VStack {
+                Spacer()
                 Image("sting")
                     .resizable()
-                    .frame(maxWidth: UIScreen.main.bounds.size.width - (UIScreen.main.bounds.size.width / 3.5), maxHeight: UIScreen.main.bounds.size.width - (UIScreen.main.bounds.size.width / 3.5))
                     .scaledToFit()
-                    .cornerRadius(10)
-                    .shadow(color: .gray, radius: 5, x: 2.0, y: 2.0)
-                    .padding(.top, UIScreen.main.bounds.size.height / 20)
-                    .padding(.bottom, 20)
+                    .frame(width: Size.screenWidth65)
+                    .cornerRadius(CornerRadius.medium)
+                    .shadow(color: .gray, radius: Shadow.radius, x: Shadow.offset, y: Shadow.offset)
+                    .padding(.bottom, Padding.medium)
                     .onTapGesture(count: 2) {
                         presentationMode.wrappedValue.dismiss()
                     }
@@ -36,50 +44,47 @@ struct PlayerView: View {
                 ZStack {
                     VStack(alignment: .leading) {
                         Text("Seven Days")
-                            .font(.system(size: 27, weight: .bold))
+                            .font(.system(size: FontSize.large, weight: .bold))
+                            .foregroundColor(Color.label)
                             .lineLimit(1)
-                            .opacity(0.8)
                         Text("Sting")
-                            .font(.system(size: 27, weight: .bold))
-                            .foregroundColor(Color(red: 0.3, green: 0.3, blue: 0.3))
-                            .opacity(0.8)
+                            .font(.system(size: FontSize.large, weight: .bold))
+                            .foregroundColor(Color.label)
+                            .opacity(Opacity.upperMin)
                     }
-                    .frame(maxWidth: UIScreen.main.bounds.size.width, alignment: .leading)
-                    .padding(.leading, UIScreen.main.bounds.size.width / 10)
-                    .padding(.trailing, UIScreen.main.bounds.size.width / 5)
+                    .frame(width: Size.screenWidth80, alignment: .leading)
                     
                     Button {} label: {
                         Text("\(Image(systemName: "ellipsis"))")
-                            .foregroundColor(.black)
-                            .opacity(0.8)
-                            .frame(width: 30, height: 30, alignment: .center)
+                            .foregroundColor(Color.label)
+                            .opacity(Opacity.upperMin)
+                            .frame(width: Size.playerRoundButtonWidth, height: Size.playerRoundButtonWidth, alignment: .center)
                             .background(
-                                AppColors.distilledBlue
-                                    .cornerRadius(20)
-                                    .shadow(color: .gray, radius: 3, x: 1.0, y: 1.0)
+                                LinearGradient(gradient: colorScheme == .dark ? Color.darkSky : Color.purpleMyst, startPoint: .leading, endPoint: .topTrailing)
+                                    .cornerRadius(CornerRadius.large)
+                                    .shadow(color: .gray, radius: Shadow.radius, x: Shadow.offset, y: Shadow.offset)
                                 )
                     }
-                    .frame(maxWidth: UIScreen.main.bounds.size.width, alignment: .trailing)
-                    .padding(.trailing, 40)
+                    .frame(width: Size.screenWidth80, alignment: .trailing)
+                    
                 }
                 
                 // time bar
                 Slider(value: $currentTime, in: 0...totalTime)
-                    .accentColor(Color.black).opacity(0.8)
-                    .frame(maxWidth: UIScreen.main.bounds.size.width / 1.25)
-                    .padding(.leading, 10)
-                    .padding(.trailing, 10)
-                    .padding(.top, 10)
-                    .padding(.bottom, 5)
+                    .accentColor(Color.label).opacity(Opacity.upperMin)
+                    .frame(width: Size.screenWidth80)
+                    .padding(.horizontal, Padding.regular)
+                    .padding(.top, Padding.regular)
+                    .padding(.bottom, Padding.small)
                 
                 HStack {
                     Text("0:00")
                     Spacer()
                     Text("-\(timeString(time: totalTime - currentTime))")
                 }
-                .foregroundColor(Color.black).opacity(0.8)
-                .frame(maxWidth: (UIScreen.main.bounds.size.width / 1.25), maxHeight: 3, alignment: .leading)
-                .padding(.bottom, 50)
+                .foregroundColor(Color.label).opacity(Opacity.upperMin)
+                .frame(width: Size.screenWidth80, alignment: .leading)
+                .padding(.bottom, Padding.medium)
                 
                 // back play forward
                 HStack {
@@ -87,41 +92,42 @@ struct PlayerView: View {
                         Image(systemName: "backward.fill")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 30)
+                            .frame(width: Size.playerControlButtonWidth, height: Size.playerControlButtonWidth)
+                            .padding(.trailing, Padding.large)
                     }
+                    
                     Button {} label: {
                         Image(systemName: "play.fill")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 30)
-                            .padding(.leading, 70)
-                            .padding(.trailing, 70)
+                            .frame(width: Size.playerControlButtonWidth, height: Size.playerControlButtonWidth)
+                            .padding(.horizontal, Padding.large)
                     }
                     Button {} label: {
                         Image(systemName: "forward.fill")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 30)
+                            .frame(width: Size.playerControlButtonWidth, height: Size.playerControlButtonWidth)
+                            .padding(.leading, Padding.large)
                     }
                 }
-                .foregroundColor(Color.black).opacity(0.8)
-                .padding(.bottom, 50)
+                .foregroundColor(Color.label)
+                .padding(.bottom, Padding.large)
                 
                 // volume bar
                 HStack {
                     Image(systemName: "speaker.fill")
-                        .foregroundColor(Color.black).opacity(0.8)
+                        .foregroundColor(Color.label).opacity(Opacity.upperMin)
                     
                     Slider(value: $volumeLevel, in: 0...10)
-                        .accentColor(Color.black).opacity(0.8)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
-                    
+                        .accentColor(Color.label).opacity(Opacity.upperMin)
+                        .padding(.horizontal, Padding.regular)
+
                     Image(systemName: "speaker.wave.3.fill")
-                        .foregroundColor(Color.black).opacity(0.8)
+                        .foregroundColor(Color.label).opacity(Opacity.upperMin)
                 }
-                .frame(maxWidth: UIScreen.main.bounds.size.width / 1.25)
-                .padding(.bottom, 60)
+                .frame(width: Size.screenWidth80)
+                .padding(.vertical, Padding.large)
                 
                 // bottom controls
                 HStack {
@@ -129,24 +135,26 @@ struct PlayerView: View {
                         Image(systemName: "quote.bubble")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 25, height: 25)
+                            .frame(width: Size.playerBottomButtonWidth, height: Size.playerBottomButtonWidth)
+                            .padding(.trailing, Padding.large)
                     }
                     Button {} label: {
                         Image(systemName: "airplayaudio")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 25, height: 25)
-                            .padding(.leading, 70)
-                            .padding(.trailing, 70)
+                            .frame(width: Size.playerBottomButtonWidth, height: Size.playerBottomButtonWidth)
+                            .padding(.horizontal, Padding.large)
                     }
                     Button {} label: {
                         Image(systemName: "shuffle")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 25, height: 25)
+                            .frame(width: Size.playerBottomButtonWidth, height: Size.playerBottomButtonWidth)
+                            .padding(.leading, Padding.large)
                     }
                 }
-                .foregroundColor(Color.black).opacity(0.8)
+                .foregroundColor(Color.label).opacity(Opacity.upperMin)
+                .padding(.top, Padding.large)
                 
                 Spacer()
             }
@@ -158,10 +166,4 @@ struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
         PlayerView()
     }
-}
-
-func timeString(time: Double) -> String {
-    let minute = Int(time) / 60 % 60
-    let second = Int(time) % 60
-    return String(format: "%02i:%02i", minute, second)
 }

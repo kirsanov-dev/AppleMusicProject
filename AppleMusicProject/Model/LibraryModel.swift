@@ -15,7 +15,6 @@ struct LibraryModel: Identifiable, Hashable {
 }
 
 extension LibraryModel {
-    
     static let data = [
         LibraryModel(title: "Плейлисты", icon: "music.note.list"),
         LibraryModel(title: "Артисты", icon: "music.mic"),

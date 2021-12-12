@@ -7,32 +7,30 @@
 
 import SwiftUI
 
-struct PlaylistSection: View {
-    @State var items = SampleCategoryModel.playlistsData
+struct PlaylistView: View {
+    @State var items = SampleCategoryModel.data
     
     let rows: [GridItem] = [
-        GridItem(.fixed(330))
+        GridItem(.flexible())
     ]
     
     var body: some View {
+        Divider()
         ScrollView(.horizontal, showsIndicators: false) {
-            Divider()
             LazyHGrid(rows: rows) {
-                ForEach(items, id: \.id) { item in
+                ForEach(items.filter( {$0.type == .playlist} ), id: \.id) { item in
                     PlaylistItem(image: item.image, title: item.title, category: item.category, description: item.description)
                 }
             }
-            .padding(.leading, 12)
-            .padding(.trailing, 12)
-            .padding(.bottom, 10)
-            Divider()
+            .padding(.horizontal, Padding.regular)
+            .padding(.bottom, Padding.regular)
         }
-        .frame(height: 380)
+        Divider()
     }
 }
 
-struct PlaylistSection_Previews: PreviewProvider {
+struct PlaylistView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaylistSection()
+        PlaylistView()
     }
 }

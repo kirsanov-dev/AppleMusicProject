@@ -15,8 +15,7 @@ struct CategoriesModel: Identifiable, Hashable {
 }
 
 extension CategoriesModel {
-    
-    static let categories = [
+    static let data = [
         CategoriesModel(image: "category-1", title: "Instrumental"),
         CategoriesModel(image: "category-2", title: "Live Concerts"),
         CategoriesModel(image: "category-3", title: "Violin"),
@@ -28,5 +27,4 @@ extension CategoriesModel {
         CategoriesModel(image: "category-9", title: "Ambient"),
         CategoriesModel(image: "category-10", title: "Space"),
     ]
-    
 }

@@ -7,38 +7,39 @@
 
 import SwiftUI
 
-struct TracksSection: View {
-    @State var items = SampleCategoryModel.tracksData
+struct TracksView: View {
+    @State var items = SampleCategoryModel.data
     
     let rows: [GridItem] = [
-        GridItem(.fixed(240))
+        GridItem(.fixed(Size.screenWidth60))
     ]
     
     var body: some View {
-        
         VStack {
             Text("Настроение – драйв")
                 .font(.system(size: FontSize.large, weight: .bold, design: .default))
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 12)
+                .padding(.leading, Padding.regular)
             
             ScrollView(.horizontal, showsIndicators: false)  {
                 LazyHGrid(rows: rows) {
-                    ForEach(items, id: \.id) { item in
+                    ForEach(items.filter( {$0.type == .track} ), id: \.id) { item in
                         TracksItem(image: item.image, title: item.title, artist: item.artist ?? "", description: item.description)
                     }
                 }
-                .padding(.trailing, 12)
-                .padding(.leading, 12)
+                .padding(.trailing, Padding.regular)
+                .padding(.leading, Padding.regular)
             }
+            .frame(height: Size.tracksViewHeight)
         }
-        .frame(height: 270)
+        .padding(.top, Padding.small)
     }
+
 }
 
-struct TracksSection_Previews: PreviewProvider {
+struct TracksView_Previews: PreviewProvider {
     static var previews: some View {
-        TracksSection()
+        TracksView()
     }
 }

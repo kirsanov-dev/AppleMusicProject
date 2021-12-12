@@ -25,10 +25,11 @@ struct FavoritesItem: View {
                 .foregroundColor(.gray)
             Image(self.image)
                 .resizable()
+                .scaledToFill()
                 .clipped()
-                .frame(width: 380)
-                .scaledToFit()
-                .cornerRadius(10)
+                .frame(maxWidth: Size.screenWidth90)
+                .cornerRadius(CornerRadius.regular)
         }
+        .frame(height: Size.screenHeight40)
     }
 }

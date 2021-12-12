@@ -13,7 +13,7 @@ struct MainLibraryView: View {
             Text("Ищете свою музыку?")
                 .font(.system(size: FontSize.large, weight: .bold, design: .default))
             Text("Здесь появится купленная Вами в iTunes Store музыка")
-                .frame(width: 300)
+                .frame(width: Size.screenWidth60)
                 .font(.system(size: FontSize.small))
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
