@@ -19,8 +19,8 @@ struct TracksItem: View {
             Image(self.image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: UIScreen.main.bounds.size.width * 0.44)
-                .cornerRadius(5)
+                .frame(width: Size.tracksImageHeight)
+                .cornerRadius(CornerRadius.regular)
             Text(self.title)
                 .font(.system(size: FontSize.tiny))
                 .fontWeight(.bold)
@@ -33,7 +33,6 @@ struct TracksItem: View {
                 .lineLimit(2)
                 .foregroundColor(.gray)
         }
-//        .frame(width: 185, height: 235)
     }
 }
 

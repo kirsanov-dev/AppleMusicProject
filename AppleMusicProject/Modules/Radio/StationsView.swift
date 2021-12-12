@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct StationsView: View {
-    @State var items = RadioModel.stationsData
+    @State var items = RadioModel.data
     
     let columns: [GridItem] = [
-        GridItem(.flexible(), spacing: 12)
+        GridItem(.flexible(), spacing: Spacing.regular)
     ]
     
     var body: some View {
@@ -26,14 +26,15 @@ struct StationsView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             
                     ) {
-                        ForEach(items, id: \.id) { item in
+                        ForEach(items.filter( {$0.type == .station} ), id: \.id) { item in
                             StationsItem(image: item.image, title: item.title, description: item.description)
                         }
                     }
                 })
-                .padding(.leading, 12)
-                .padding(.trailing, 12)
+                .padding(.leading, Padding.regular)
+                .padding(.trailing, Padding.regular)
         }
+        .padding(.top, Padding.small)
     }
 }
 

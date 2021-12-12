@@ -15,16 +15,16 @@ struct ListItem: View {
     
     var body: some View {
         Button(action: self.action) {
-            HStack(spacing: 16) {
+            HStack(spacing: Spacing.regular) {
                 Image(systemName: self.icon)
                     .resizable()
-                    .frame(width: 22, height: 22)
+                    .frame(width: Size.screenWidth5, height: Size.screenWidth5)
                     .foregroundColor(.red)
                 Text(self.title)
                     .font(.system(size: FontSize.regular))
-                    .foregroundColor(.black)
+                    .foregroundColor(Color.label)
             }
-            .frame(height: 58)
+            .frame(height: Size.screenWidth10)
         }
     }
 }

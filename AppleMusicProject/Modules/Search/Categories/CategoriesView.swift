@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CategoriesGridView: View {
+struct CategoriesView: View {
     
-    @State var items = CategoriesModel.categories
+    @State var items = CategoriesModel.data
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -24,7 +24,7 @@ struct CategoriesGridView: View {
                             .font(.system(size: FontSize.medium, weight: .black, design: .default))
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.top, 10)
+                            .padding(.top, Padding.regular)
                         
                 ) {
                     ForEach(items, id: \.id) { item in
@@ -35,13 +35,12 @@ struct CategoriesGridView: View {
                 }
             })
         }
-        .padding(.leading, 15)
-        .padding(.trailing, 15)
+        .padding(.horizontal, Padding.regular)
     }
 }
 
-struct CategoriesGridView_Previews: PreviewProvider {
+struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesGridView()
+        CategoriesView()
     }
 }

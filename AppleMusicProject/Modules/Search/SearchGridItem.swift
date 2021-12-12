@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchGridItem: View {
+    
     var image: String = ""
     var title: String = ""
     var description: String = ""
@@ -17,28 +18,28 @@ struct SearchGridItem: View {
         HStack(alignment: .center) {
             Image(self.image)
                 .resizable()
-                .frame(width: 45, height: 45)
+                .frame(width: Size.searchGridImageWidth, height: Size.searchGridImageWidth)
                 .scaledToFit()
-                .cornerRadius(5)
+                .cornerRadius(CornerRadius.regular)
             VStack(alignment: .leading) {
                 Spacer()
                 Text(self.title)
                     .font(.system(size: FontSize.small))
-                Text("Плейлист - \(self.description)")
+                Text("\((type == .playlist ? "Плейлист –" : "Песня –") + self.description)")
                     .font(.system(size: FontSize.small))
                     .foregroundColor(.gray)
                 Spacer()
                 Divider()
             }
-            .padding(.leading, 12)
+            .padding(.leading, Padding.regular)
             Spacer()
             Button {} label: {
                 Text(Image(systemName: (type == .playlist) ? "chevron.right" : "ellipsis"))
-                    .frame(width: 20, height: 20, alignment: .center)
+                    .frame(width: Size.searchGridAttributeWidth, height: Size.searchGridAttributeWidth, alignment: .center)
                     .font(.system(size: FontSize.tiny))
             }
             
         }
-        .frame(height: 60)
+        .frame(height: Size.searchGridItemHeight)
     }
 }

@@ -15,13 +15,14 @@ struct CategoriesItem: View {
         ZStack(alignment: .leading) {
             Image(self.image)
                 .resizable()
-                .frame(maxWidth: 200, maxHeight: 140)
+                .frame(minWidth: Size.screenWidth45, minHeight: Size.screenWidth25)
                 .scaledToFit()
-                .cornerRadius(10)
+                .cornerRadius(CornerRadius.medium)
             Text(self.title)
-                .frame(maxWidth: 150, maxHeight: 110, alignment: .bottomLeading)
-                .offset(x: 15)
+                .frame(minWidth: Size.screenWidth45, minHeight: Size.screenWidth25, alignment: .bottomLeading)
+                .offset(x: Size.screenWidth3)
                 .lineLimit(3)
+                .multilineTextAlignment(.leading)
                 .font(.system(size: FontSize.tiny, weight: .black))
                 .foregroundColor(.white)
         }

@@ -18,9 +18,11 @@ struct SearchView: View {
             VStack {
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
                 if !isSearching {
-                    CategoriesGridView()
+                    CategoriesView()
+                        .navigationBarHidden(false)
                 } else {
                     SearchGridView(model: model, searchText: $searchText)
+                        .navigationBarHidden(true)
                 }
             }
             .navigationTitle("Поиск")
@@ -33,3 +35,5 @@ struct SearchView_Previews: PreviewProvider {
         SearchView()
     }
 }
+
+

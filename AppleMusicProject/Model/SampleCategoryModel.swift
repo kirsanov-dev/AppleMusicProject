@@ -12,11 +12,6 @@ class SampleCategoryModelData: ObservableObject {
     @Published var data = SampleCategoryModel.data
 }
 
-enum DataType: String {
-    case track
-    case playlist
-}
-
 struct SampleCategoryModel: Identifiable, Hashable {
     let id = UUID()
     var image: String
@@ -28,7 +23,6 @@ struct SampleCategoryModel: Identifiable, Hashable {
 }
 
 extension SampleCategoryModel {
-    
     static let data = [
         SampleCategoryModel(image: "playlist-1", title: "Music For Coding", category: "Избранный плейлист", description: "Apple Music", type: .playlist),
         SampleCategoryModel(image: "playlist-2", title: "Relaxing Jazz", category: "Избранный плейлист", description: "Apple Music", type: .playlist),

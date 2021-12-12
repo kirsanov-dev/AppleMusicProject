@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @State var items = RadioModel.favoritesData
+    @State var items = RadioModel.data
     
     let rows: [GridItem] = [
-        GridItem(.fixed(330))
+        GridItem(.flexible())
     ]
     
     var body: some View {
+        Divider()
         ScrollView(.horizontal, showsIndicators: false) {
-            Divider()
+            
             LazyHGrid(rows: rows) {
-                ForEach(items, id: \.id) { item in
+                ForEach(items.filter( {$0.type == .favoriteStation} ), id: \.id) { item in
                     FavoritesItem(image: item.image, title: item.title, category: item.category, description: item.description)
                 }
             }
-            .padding(.leading, 12)
-            .padding(.bottom, 10)
-            Divider()
+            .padding(.horizontal, Padding.regular)
+            .padding(.bottom, Padding.regular)
         }
-        .frame(height: 380)
+        Divider()
     }
 }
 

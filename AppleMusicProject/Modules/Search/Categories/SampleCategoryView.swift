@@ -10,20 +10,20 @@ import SwiftUI
 struct SampleCategoryView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
-            PlaylistSection()
-            TracksSection()
+            PlaylistView()
+            TracksView()
                 .navigationBarItems(trailing: Button {}
                                     label: {
                     Text(Image(systemName: "ellipsis"))
-                        .frame(width: 25, height: 25, alignment: .center)
+                        .frame(width: Size.categoryNavigationRoundButtonWidth, height: Size.categoryNavigationRoundButtonWidth, alignment: .center)
                         .background(
-                            Color.white
-                                .cornerRadius(25)
-                                .shadow(color: .gray, radius: 2, x: 0.5, y: 0.5)
+                            Color.systemBackground
+                                .cornerRadius(Size.categoryNavigationRoundButtonWidth)
+                                .shadow(color: .gray, radius: Shadow.radius, x: Shadow.offset, y: Shadow.offset)
                         )
                         .font(.system(size: FontSize.tiny))
                 }
-                                        .frame(maxWidth: UIScreen.main.bounds.size.width, alignment: .trailing)
+                .frame(alignment: .trailing)
                 )
                 .navigationTitle("Время кодить")
         }
