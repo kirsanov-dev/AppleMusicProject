@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CategoriesModel: Identifiable, Hashable {
+struct CategoriesModel: Identifiable {
     let id = UUID()
     var image: String
     var title: String

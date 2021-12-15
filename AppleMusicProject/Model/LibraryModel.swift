@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct LibraryModel: Identifiable, Hashable {
+struct LibraryModel: Identifiable {
     let id = UUID()
     var title: String
     var icon: String
