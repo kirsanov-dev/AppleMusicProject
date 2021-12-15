@@ -35,7 +35,6 @@ struct TracksView: View {
         }
         .padding(.top, Padding.small)
     }
-
 }
 
 struct TracksView_Previews: PreviewProvider {

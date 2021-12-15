@@ -8,10 +8,6 @@
 import Foundation
 import SwiftUI
 
-class SampleCategoryModelData: ObservableObject {
-    @Published var data = SampleCategoryModel.data
-}
-
 struct SampleCategoryModel: Identifiable, Hashable {
     let id = UUID()
     var image: String

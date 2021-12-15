@@ -31,7 +31,6 @@ struct EditLibraryView: View {
         .listStyle(PlainListStyle())
     }
 
-    
     func move(from source: IndexSet, to destination: Int) {
         self.listItems.move(fromOffsets: source, toOffset: destination)
     }

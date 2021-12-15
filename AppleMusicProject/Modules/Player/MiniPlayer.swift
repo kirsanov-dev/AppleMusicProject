@@ -11,47 +11,48 @@ struct MiniPlayer: View {
     @State private var showingPlayerView = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             HStack(spacing: Spacing.regular) {
-                Image("sting")
-                    .resizable()
-                    .frame(width: Size.miniPlayerImageWidth, height: Size.miniPlayerImageWidth)
-                    .cornerRadius(CornerRadius.medium)
-                    .shadow(color: .gray, radius: Shadow.radius, x: Shadow.offset, y: Shadow.offset)
-                    .padding(.leading, Padding.regular)
-                    .onTapGesture(count: 2, perform: {
-                        showingPlayerView.toggle()
-                    })
-                    .fullScreenCover(isPresented: $showingPlayerView, content: PlayerView.init)
-                
-                Text("Seven Days")
-                    .padding(.leading, Padding.small)
-                    .font(.system(size: FontSize.regular))
-                
-                Spacer()
-                
-                Button {} label: {
-                    Image(systemName: "play.fill")
+                    Image("sting")
                         .resizable()
-                        .frame(width: Size.miniPlayerButtonWidth, height: Size.miniPlayerButtonWidth)
-                        .foregroundColor(Color.label)
+                        .frame(width: Size.miniPlayerImageWidth, height: Size.miniPlayerImageWidth)
+                        .cornerRadius(CornerRadius.medium)
+                        .shadow(color: .gray, radius: Shadow.radius, x: Shadow.offset, y: Shadow.offset)
+                        .padding(.leading, Padding.regular)
+                    
+                    Text("Seven Days")
+                        .padding(.leading, Padding.small)
+                        .font(.system(size: FontSize.regular))
+                    
+                    Spacer()
+                    
+                    Button {} label: {
+                        Image(systemName: "play.fill")
+                            .resizable()
+                            .frame(width: Size.miniPlayerButtonWidth, height: Size.miniPlayerButtonWidth)
+                            .foregroundColor(Color.label)
+                    }
+                    
+                    Button {} label: {
+                        Image(systemName: "forward.fill")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: Size.miniPlayerButtonWidth, height: Size.miniPlayerButtonWidth)
+                            .foregroundColor(Color.label)
+                            .padding(.trailing, Padding.medium * 2)
+                            .padding(.leading, Padding.medium)
+                    }
                 }
-                
-                Button {} label: {
-                    Image(systemName: "forward.fill")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: Size.miniPlayerButtonWidth, height: Size.miniPlayerButtonWidth)
-                        .foregroundColor(Color.label)
-                        .padding(.trailing, Padding.medium * 2)
-                        .padding(.leading, Padding.medium)
-                }
-    
-            }
-            .accentColor(Color.label)
+                .accentColor(Color.label)
+                .frame(height: Size.miniPlayerHeight)
+                .background(Blur(style: .systemUltraThinMaterial))
+                .onTapGesture(count: 2, perform: {
+                    showingPlayerView.toggle()
+                })
+                .fullScreenCover(isPresented: $showingPlayerView, content: PlayerView.init)
+            
+            Divider()
         }
-        .frame(height: Size.miniPlayerHeight)
-        .background(Blur(style: .systemUltraThinMaterial))
         .offset(y: Size.miniPlayerOffset)
     }
 }
