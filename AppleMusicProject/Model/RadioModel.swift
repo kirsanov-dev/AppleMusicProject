@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct RadioModel: Identifiable, Hashable {
+struct RadioModel: Identifiable {
     let id = UUID()
     var image: String
     var title: String

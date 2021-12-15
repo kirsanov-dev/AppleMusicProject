@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct SampleCategoryModel: Identifiable, Hashable {
+struct SampleCategoryModel: Identifiable {
     let id = UUID()
     var image: String
     var title: String
