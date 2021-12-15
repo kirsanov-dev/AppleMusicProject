@@ -87,7 +87,7 @@ enum Size {
     
     // MARK: - Mini Player
     static let miniPlayerHeight: CGFloat = 80
-    static let miniPlayerOffset: CGFloat = -49
+    static let miniPlayerOffset: CGFloat = -48
     static let miniPlayerButtonWidth: CGFloat = 22
     static let miniPlayerImageWidth: CGFloat = 60
     
@@ -116,7 +116,7 @@ enum Size {
 }
 
 enum Shadow {
-    static let radius: CGFloat = 2.0
+    static let radius: CGFloat = 3.0
     static let offset: CGFloat = 1.0
 }
 
