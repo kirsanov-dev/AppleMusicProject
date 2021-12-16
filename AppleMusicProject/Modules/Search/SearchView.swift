@@ -18,8 +18,6 @@ struct SearchView: View {
             VStack {
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
                 if !isSearching {
-//                    CategoriesView()
-//                        .navigationBarHidden(false)
                     CategoriesCollectionView()
                         .navigationBarHidden(false)
                 } else {

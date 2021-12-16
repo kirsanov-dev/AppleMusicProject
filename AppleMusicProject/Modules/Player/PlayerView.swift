@@ -37,9 +37,6 @@ struct PlayerView: View {
                     .cornerRadius(CornerRadius.medium)
                     .shadow(color: .gray, radius: Shadow.radius, x: Shadow.offset, y: Shadow.offset)
                     .padding(.bottom, Padding.medium)
-//                    .onTapGesture(count: 2) {
-//                        presentationMode.wrappedValue.dismiss()
-//                    }
                 
                 ZStack {
                     VStack(alignment: .leading) {
