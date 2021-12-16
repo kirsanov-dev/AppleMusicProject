@@ -18,7 +18,9 @@ struct SearchView: View {
             VStack {
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
                 if !isSearching {
-                    CategoriesView()
+//                    CategoriesView()
+//                        .navigationBarHidden(false)
+                    CategoriesCollectionView()
                         .navigationBarHidden(false)
                 } else {
                     SearchGridView(model: model, searchText: $searchText)

@@ -28,6 +28,7 @@ enum Spacing {
     static let small: CGFloat = 5
     static let regular: CGFloat = 12
     static let medium: CGFloat = 20
+    static let collectionView: CGFloat = Padding.regular / 3
 }
 
 enum CornerRadius {
@@ -113,6 +114,9 @@ enum Size {
     static let playlistViewHeight: CGFloat = 330
     static let tracksViewHeight: CGFloat = 220
     static let tracksImageHeight: CGFloat = 180
+    
+    // MARK: - Categories Collection View
+    static let collectionViewHeaderHeight: CGFloat = 45
 }
 
 enum Shadow {
