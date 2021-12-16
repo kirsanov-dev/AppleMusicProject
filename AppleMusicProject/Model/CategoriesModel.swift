@@ -25,6 +25,6 @@ extension CategoriesModel {
         CategoriesModel(image: "category-7", title: "Alternative"),
         CategoriesModel(image: "category-8", title: "Russian Folk"),
         CategoriesModel(image: "category-9", title: "Ambient"),
-        CategoriesModel(image: "category-10", title: "Space"),
+        CategoriesModel(image: "category-10", title: "Space")
     ]
 }
