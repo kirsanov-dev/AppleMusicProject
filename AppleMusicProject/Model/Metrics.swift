@@ -117,6 +117,8 @@ enum Size {
     
     // MARK: - Categories Collection View
     static let collectionViewHeaderHeight: CGFloat = 45
+    static let collectionCellTitleLeading: CGFloat = 15
+    static let collectionCellTitleBottom: CGFloat = -12
 }
 
 enum Shadow {
